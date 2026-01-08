@@ -14,6 +14,7 @@ public class EmployeeTests extends BaseTest {
     EmployeeModel employeeModel = new EmployeeModel();
     String generatedEmployeeId;
 
+
     @Test
     public void testGetEmployeeById() {
         Response response = employeeService.getAnEmployeeById(employeeModel.getEmployeeId());
@@ -37,7 +38,7 @@ public class EmployeeTests extends BaseTest {
         generatedEmployeeId = response.path("id");
     }
 
-    @Test
+    @Test(dependsOnMethods = "createEmployee")
     public void deleteEmployeeById() {
         Response response = employeeService.deleteEmployeeById(generatedEmployeeId);
         response.then().statusCode(200);

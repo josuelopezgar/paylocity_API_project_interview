@@ -3,10 +3,8 @@ package Models;
 import java.util.HashMap;
 import java.util.Map;
 
-import static Utilities.Utils.generateRamdomString;
-
 public class EmployeeModel {
-    private String employeeId = "35aebe23-94e0-4bef-94f1-787bc62854e6";
+    private String employeeId = "edff67ca-6a3f-4f15-bb3c-ba3ac45fe59e";
     private Map<String, Object> updateEmployeePayload = new HashMap<>();
     private Map<String, Object> createEmployeePayload = new HashMap<>();
 
